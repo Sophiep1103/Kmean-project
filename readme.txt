@@ -1,8 +1,8 @@
 Overview - K-means Clustering Implementation
-Project Authors
 
-Sophie Prahia
-Romy Shufman
+Project Authors:
+*Sophie Prahia
+*Romy Shufman
 
 This project was created as part of a university software project course. It implements the K-means clustering algorithm in Python. Developed in 2021, it provides a robust solution for unsupervised machine learning and data segmentation.
 
