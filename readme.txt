@@ -1,3 +1,34 @@
+Overview - K-means Clustering Implementation
+
+This project implements the K-means clustering algorithm in Python. Developed in 2021, it provides a robust solution for unsupervised machine learning and data segmentation.
+Features
+
+Unsupervised machine learning clustering algorithm
+Supports multiple distance metrics
+Handles multi-dimensional data
+Visualizes clustering results
+Customizable number of clusters
+
+Key Components:
+
+K-means clustering algorithm
+Distance calculation methods
+Centroid initialization strategies
+Convergence detection
+Visualization utilities
+
+Algorithm Details:
+
+Input: Dataset, number of clusters (K)
+Initialize K centroids
+Assign points to nearest centroid
+Recalculate centroids
+Repeat until convergence
+
+
+
+
+
 gcc spkmeans.c -o spkmeans -lm
 spkmeans wam text.txt
 spkmeans ddg text.txt
