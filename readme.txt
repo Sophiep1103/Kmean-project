@@ -1,7 +1,10 @@
 Overview - K-means Clustering Implementation
+Project Authors
 
-This project implements the K-means clustering algorithm in Python. Developed in 2021, it provides a robust solution for unsupervised machine learning and data segmentation.
-Features
+Sophie Prahia
+Romy Shufman
+
+This project was created as part of a university software project course. It implements the K-means clustering algorithm in Python. Developed in 2021, it provides a robust solution for unsupervised machine learning and data segmentation.
 
 Unsupervised machine learning clustering algorithm
 Supports multiple distance metrics
