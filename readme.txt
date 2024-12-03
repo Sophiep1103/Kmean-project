@@ -12,6 +12,13 @@ Handles multi-dimensional data
 Visualizes clustering results
 Customizable number of clusters
 
+├── spkmeans.py      # Python interface
+├── spkmeans.c       # C implementation
+├── spkmeans.h       # C header file
+├── spkmeansmodule.c # Python C API wrapper
+├── setup.py         # Build configuration
+└── Makefile        # Compilation script
+
 Key Components:
 
 K-means clustering algorithm
