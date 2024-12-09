@@ -4,13 +4,8 @@ Project Authors:
 *Sophie Prahia
 *Romy Shufman
 
-This project was created as part of a university software project course. It implements the K-means clustering algorithm in Python. Developed in 2021, it provides a robust solution for unsupervised machine learning and data segmentation.
-
-Unsupervised machine learning clustering algorithm
-Supports multiple distance metrics
-Handles multi-dimensional data
-Visualizes clustering results
-Customizable number of clusters
+This project was created as part of a university software project course. It implements the K-means clustering algorithm in Python. Developed in 2022, it provides a robust solution for unsupervised machine learning and data segmentation.
+Unsupervised machine learning clustering algorithm, Supports multiple distance metrics, Handles multi-dimensional data, Customizable number of clusters
 
 ├── spkmeans.py      # Python interface
 ├── spkmeans.c       # C implementation
@@ -19,13 +14,36 @@ Customizable number of clusters
 ├── setup.py         # Build configuration
 └── Makefile        # Compilation script
 
-Key Components:
+spkmeans.py (Python Interface) - This is the main Python script that users interact with. It handles input/output, data processing, and calling the C functions.It Uses import mykmeanssp to access the C functions.
 
-K-means clustering algorithm
-Distance calculation methods
-Centroid initialization strategies
-Convergence detection
-Visualization utilities
+spkmeans.c and spkmeans.h (C Implementation)- 
+spkmeans.c: Contains the actual implementation of the algorithms (wam, ddg, jacobi, etc.)
+spkmeans.h: Declares the functions and structures that spkmeans.c implements
+
+
+spkmeansmodule.c (The "Bridge")- This is the *translator* between Python and C. It contains wrapper functions that:
+1. Take Python data → Convert to C format
+2. Call the C functions
+3.Take C results → Convert back to Python format
+
+
+setup.py (Building Instructions)- This file tells Python how to build your C code into something it can import. Specifies which files to compile and link together. When you run python setup.py build, it creates the importable module
+
+Makefile (Compilation Helper)- Helps compile and manage the C code components. Makes it easier to build and clean the project
+
+The Flow:
+CopyUser → spkmeans.py → mykmeanssp → spkmeansmodule.c → spkmeans.c → Results
+      (Python)       (Import)      ("Bridge")        (C code)
+
+Python loads spkmeans.py
+When it sees import mykmeanssp, it loads the *compiled* C module
+When you call a function like mykmeanssp.wam():
+
+The call goes through spkmeansmodule.c,
+Gets translated to C format,
+Runs your C implementation,
+Results come back through the translation layer,
+Python gets the results
 
 Algorithm Details:
 
